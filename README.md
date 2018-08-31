@@ -1,6 +1,6 @@
 # README
 
-#Currency Exchange
+# Currency Exchange
 
 User should be able to enter an amount and convert from a currency to another.
 
