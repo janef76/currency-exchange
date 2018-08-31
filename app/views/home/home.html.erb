@@ -1,0 +1,19 @@
+<h1>Currency Exchange</h1>
+<%= form_for("/", :method => "get") do |f|%>
+
+  <%= f.label :date %>
+  <%= f.date_select :date, :value => Time.now %>
+
+  <%= f.label :amount %>
+  <%= f.number_field :amount %>
+
+  <%= f.label :from %>
+  <%= f.select :from, options_for_select(@countries) %>
+
+  <%= f.label :to %>
+  <%= f.select :to, options_for_select(@countries) %>
+
+  <%= f.submit ("Convert") %>
+<% end %>
+
+<p>Converted amount is: <%= @converted_amount %></p>
